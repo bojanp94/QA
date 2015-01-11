@@ -7,10 +7,16 @@ public class UserGettingStartedPage {
 	
 	public UserGettingStartedPage(WebDriver driver)
 	{	
-		if(driver.getTitle().equals("Invitations"))
+		if(driver.getTitle().equals("My Questionss"))
 			this.driver = driver;
 		else
 			throw new IllegalStateException("This is not the login page:" + driver.getCurrentUrl());
+	}
+	
+	public LoginPage logout()
+	{
+		driver.get("https://alpha.insynctiveapps.com/Insynctive.Hub/Logout.aspx");
+		return new LoginPage(driver);	
 	}
 
 }
