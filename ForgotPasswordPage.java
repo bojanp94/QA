@@ -10,7 +10,7 @@ public class ForgotPasswordPage {
 		if(driver.getTitle().equals("Forgot Password"))
 			this.driver = driver;
 		else
-			throw new IllegalStateException("This is not the login page:" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not the forgot password page:" + driver.getCurrentUrl());
 	}
 	public LoginPage sendRequest(String email)
 	{

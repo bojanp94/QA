@@ -15,7 +15,6 @@ public abstract class Mail {
 	 * Account in the background and retrieve the confirmation URL for
 	 * new account creation. You can use the Gmail account:
 	 * username: insynctivetest@gmail.com
-	 * password: automation123456
 	 * @param email
 	 * @param password
 	 * @return
@@ -41,12 +40,16 @@ public abstract class Mail {
 		Message regMail = null;
 		
 		// Search for mails that have the appropriate title and wait for a max of 50s
-		for (int i = 0; i < 5; i++) 
+		for (int i = 0; i < 50; i++) 
 		{
 			messages = folder.search(new SubjectTerm("Insynctive Account Credentials"), folder.getMessages());
 			if (messages.length == 0) 
 			{
 				Thread.sleep(10000);
+			}
+			else
+			{
+				break;
 			}
 		}
 		// Search for unread mail from messages

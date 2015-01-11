@@ -10,7 +10,7 @@ public class UserGettingStartedPage {
 		if(driver.getTitle().equals("My Questionss"))
 			this.driver = driver;
 		else
-			throw new IllegalStateException("This is not the login page:" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not the user getting startet page page:" + driver.getCurrentUrl());
 	}
 	
 	public LoginPage logout()

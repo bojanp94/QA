@@ -15,7 +15,7 @@ public class HomePage {
 		if(driver.getTitle().equals("My Questions")||driver.getTitle().equals("Invitations"))
 			this.driver = driver;
 		else
-			throw new IllegalStateException("This is not the login page:" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not the home page:" + driver.getCurrentUrl());
 	}
 	
 	/**

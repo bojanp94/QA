@@ -11,7 +11,7 @@ public class AgentHRPage {
 		if(driver.getTitle().equals("Invitations"))
 			this.driver = driver;
 		else
-			throw new IllegalStateException("This is not the login page:" + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not the agent HR page page:" + driver.getCurrentUrl());
 	} 
 	public LoginPage logout()
 	{
@@ -22,8 +22,8 @@ public class AgentHRPage {
 	{
 		driver.findElement(By.id("tds_body_mainTab_TPTCR_btnAddPerson_0")).click();
 		driver.findElement(By.id("tds_body_popupAddPerson_txtFirstName_I")).sendKeys(name);
-		driver.findElement(By.id("tds_body_popupAddPerson_txtFirstName_I")).sendKeys(surname);
-		driver.findElement(By.id("tds_body_popupAddPerson_txtFirstName_I")).sendKeys(email);
+		driver.findElement(By.id("tds_body_popupAddPerson_txtLastName_I")).sendKeys(surname);
+		driver.findElement(By.id("tds_body_popupAddPerson_txtEmail_I")).sendKeys(email);
 		
 		if(selfservice)
 			driver.findElement(By.id("tds_body_popupAddPerson_chkInvite_S_D")).click();
